@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/index.css">
+    <title>EatBlock Game</title>
+</head>
+<body>
+    <div class="div-tiltlegame">
+        <h1>EatBlock Game</h1>
+    </div>
+    <div class="div-canvas">
+        <canvas id="game" width="20" height="20">
+        </canvas> 
+    </div>
+    <div class="div-control" id="div-control">
+        <div class="div-lideres" id="div-lideres">
+
+        </div>
+        <div class="div-menu">
+            <div class="div-menu-tempo">
+                <label for="game-tempo">Quantidade de Tempo: </label>
+                <input type="number" name="game-tempo" id="game-tempo" placeholder="Tempo em Segundos" title="Tempo em Minutos">
+            </div>
+            <div class="div-menu-start">
+                <button id="botao-start" onclick="gameStart()">Novo Jogo</button>
+            </div>
+            <div class="div-menu-stop">
+                <button id="botao-stop" onclick="gameStop()" disabled>Trava Jogo</button>
+            </div>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+    </script>
+    <script src="public/index.js"></script>
+</body>
+</html>
