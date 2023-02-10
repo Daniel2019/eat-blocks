@@ -104,6 +104,6 @@ io.on('connection', (socket) => {
   }
 });
 
-server.listen(0.0.0.0:$PORT, () => {
+server.listen($PORT, () => {
   console.log('listening on *:3000');
 });
