@@ -93,7 +93,7 @@ function placarGame(players){
 };
 
 document.addEventListener("keydown", event => {
-    // if(game.gameStart == false) return;
+    if(game.gameStart == false) return;
     switch(event.code){
         case "ArrowUp": 
             if(player.y != 0){
